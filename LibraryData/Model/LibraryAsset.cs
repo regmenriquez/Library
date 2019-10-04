@@ -19,6 +19,7 @@ namespace LibraryData.Model
         [Required]
         public Status Status { get; set; }
 
+
         [Required]
         public decimal Cost { get; set; }
 
@@ -26,6 +27,6 @@ namespace LibraryData.Model
 
         public int NumberOfCopies { get; set; }
 
-        public virtual LibraryBranch LibraryBranch { get; set; }
+        public virtual LibraryBranch Location { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace LibraryData.Model
     public class BranchHours
     {
         public int Id { get; set; }
-        public LibraryBranch LibraryBranch { get; set; }
+        public LibraryBranch Branch { get; set; }
 
         [Range(0, 6)]
         public int DayOfWeek { get; set; }

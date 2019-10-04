@@ -19,6 +19,7 @@ namespace LibraryData.Model
         [Required]
         public string Telephone { get; set; }
         public string Description { get; set; }
+    
         public DateTime OpenDate { get; set; }
 
         public virtual IEnumerable<Patron> Patrons {get; set;}

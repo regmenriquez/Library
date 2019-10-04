@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using LibraryServices;
 
 namespace Library
 {
@@ -29,9 +30,13 @@ namespace Library
            
             services.AddControllersWithViews();
             services.AddMvc();
+            services.AddSingleton(Configuration);
+            services.AddScoped<ILibraryAsset, LibraryAssetService>();
 
             services.AddDbContext<LibraryContext>(options 
                 => options.UseSqlServer(Configuration.GetConnectionString("LibraryConnection")));
+        
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
