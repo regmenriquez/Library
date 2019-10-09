@@ -19,7 +19,6 @@ namespace LibraryData.Model
         [Required]
         public Status Status { get; set; }
 
-
         [Required]
         public decimal Cost { get; set; }
 
